@@ -327,3 +327,8 @@ def forecast_results(results,industry_name):
     # Print best estimate predictions
     #print(mean_forecast2)
     return mean_forecast, lower_limits, upper_limits
+
+def plot_forecasted(industry_name):
+    location_file = 'Forecasted/'+str(industry_name)+'.pkl'
+    figure = pickle.load(open(location_file, 'rb'))
+    return figure
