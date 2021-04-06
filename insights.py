@@ -46,13 +46,13 @@ def insights():
              \. This observation can let us know the seasonal redundancy of any industries, how offend a \
                  discharge or recruit occurs. ")
     st.write("**The Most Stable Industries are:**")
-    st.write("1. Occupations in Front-line public protection services.")
-    st.write("2. Senior Management Occupations")
-    st.write("3. Processing, manufacturing and utilities supervisors and central control operators.")
+    st.write("1. Middle management occupations in trades, transportation, production and utilities.")
+    st.write("2. Management occupations")
+    st.write("3. Maintenance and equipment operation trades.")
     
     
     st.write("**The least stable industries are:**")
-    st.write('1. Sales and service occupations')
-    st.write('2. Occupations in education, law and social, community and government services')
-    st.write('3. Natural and applied sciences and related occupations')
+    st.write('1. Harvesting, landscaping and natural resources labourers')
+    st.write('2. Assisting occupations in support of health services')
+    st.write('3. Professional occupations in law and social, community and government services')
     
