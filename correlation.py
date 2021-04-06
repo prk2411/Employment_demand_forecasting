@@ -26,7 +26,7 @@ def correlation(df):
     #select radio
     kot = st.radio('Select the correlation level', ('All','Extremely Negative', 'Negative', 'Positive', 'Extremely Positive', 'Selective'))
     
-    def coorelation_plot(corr,kot):
+    def coorelation_plot(df_trans,corr,kot):
         if kot == "All":
             fig = plt.figure(figsize=(12,8))
             sns.heatmap(corr, cmap="BrBG")
@@ -68,15 +68,17 @@ def correlation(df):
             st.pyplot(fig)
         
         if kot == 'Selective':
-            options = st.multiselect('Select various industries', (industry_list))
-        
-            try:
-                df_trans = df_trans[df_trans.columns[df_trans.columns.isin(options)]]
-                corr = df_trans.corr()
-                fig = plt.figure(figsize=(12,8))
-                sns.heatmap(corr, cmap='BrBG', annot=True)
-                st.pyplot(fig)
-            except:     
-                pass
-    
-    coorelation_plot(corr, kot)
+            options = st.multiselect('Select various industries (at least 2)', (industry_list))
+            if len(options) != 1:  
+                try:
+                    df_trans = df_trans[df_trans.columns[df_trans.columns.isin(options)]]
+                    corr = df_trans.corr()
+                    fig = plt.figure(figsize=(12,8))
+                    sns.heatmap(corr, cmap='BrBG', annot=True)
+                    st.pyplot(fig)
+                except:
+                    pass
+            else:
+                st.write('Only one industry is selected. Please select at least 2 industries for coorelation.')
+          
+    coorelation_plot(df_trans, corr, kot)
