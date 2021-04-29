@@ -18,4 +18,4 @@ def forecasting(df):
     industry_name = st.selectbox('',(industry_list))
     fig = plot_forecasted(industry_name)
     st.plotly_chart(fig, use_container_width=True)
-    st.write("sjdb")
+    st.write("Disclaimer:")
