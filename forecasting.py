@@ -18,3 +18,6 @@ def forecasting(df):
     industry_name = st.selectbox('',(industry_list))
     fig = plot_forecasted(industry_name)
     st.plotly_chart(fig, use_container_width=True)
+    
+    st.write('Disclaimer: This forecast is an approximation based on statistical models using data from previous years. It should be not considered as inevitable future. Employment demand is sensitive to Nations GDP, their respective growth, Technological advancement, Domestics and Foreign investments, Government Policies and Government support.
+')
