@@ -37,6 +37,5 @@ if options == 'Correlations':
 if options == 'Forecasting':
     forecasting.forecasting(df_t)
 st.sidebar.subheader('Team Members')
-st.sidebar.write('* Priyank Patel')
-st.sidebar.write('* Nidhi Patel')
-
+st.sidebar.write('* Priyank Patel (w0753860@myscc.ca)')
+st.sidebar.write('* Nidhi Patel (w0749144@myscc.ca)')
